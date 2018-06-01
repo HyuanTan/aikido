@@ -279,7 +279,7 @@ endif()
 #
 find_program(
   CLANG_FORMAT_EXECUTABLE
-  NAMES clang-format-3.8
+  NAMES clang-format-3.9
 )
 # We only support one specific ClangFormat version because different versions
 # result in different code formatting with the same configuration. ClangFormat
