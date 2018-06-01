@@ -2,6 +2,8 @@
 BasedOnStyle:  Google
 AccessModifierOffset: -2
 AlignAfterOpenBracket: AlwaysBreak
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
 AlignEscapedNewlinesLeft: false
 AlignOperands:   true
 AlignTrailingComments: true
@@ -11,7 +13,8 @@ AllowShortCaseLabelsOnASingleLine: false
 AllowShortFunctionsOnASingleLine: None
 AllowShortIfStatementsOnASingleLine: false
 AllowShortLoopsOnASingleLine: false
-AlwaysBreakAfterDefinitionReturnType: false
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakAfterReturnType: None
 AlwaysBreakBeforeMultilineStrings: true
 AlwaysBreakTemplateDeclarations: true
 BinPackArguments: false
@@ -32,7 +35,8 @@ BreakBeforeBinaryOperators: All
 BreakBeforeBraces: Custom
 BreakBeforeTernaryOperators: true
 BreakConstructorInitializersBeforeComma: true
-ColumnLimit:     80
+BreakStringLiterals: false  # new in 3.9
+ColumnLimit: 80
 CommentPragmas:  ''
 ConstructorInitializerAllOnOneLineOrOnePerLine: true
 ConstructorInitializerIndentWidth: 2
@@ -53,10 +57,11 @@ IncludeCategories:
     Priority:  2
   - Regex:     '^".*'          # headers relative to this project
     Priority:  4
+IncludeIsMainRegex: '$'  # new in 3.9
 IndentCaseLabels: true
-IndentFunctionDeclarationAfterType: false
 IndentWidth:     2
 IndentWrappedFunctionNames: false
+JavaScriptQuotes: Leave  # new in 3.9
 KeepEmptyLinesAtTheStartOfBlocks: true
 MacroBlockBegin: ''
 MacroBlockEnd: ''
@@ -72,6 +77,8 @@ PenaltyBreakString: 1000
 PenaltyExcessCharacter: 1000000
 PenaltyReturnTypeOnItsOwnLine: 200
 PointerAlignment: Left
+ReflowComments: true  # new in 3.9
+SortIncludes: true    # new in 3.9
 SpaceAfterCStyleCast: false
 SpaceBeforeAssignmentOperators: true
 SpaceBeforeParens: ControlStatements
