@@ -4,7 +4,8 @@ AccessModifierOffset: -2
 AlignAfterOpenBracket: AlwaysBreak
 AlignConsecutiveAssignments: false
 AlignConsecutiveDeclarations: false
-AlignEscapedNewlinesLeft: false
+# AlignEscapedNewlinesLeft: false  # removed in 5.0
+AlignEscapedNewlines: Right  # new in 5.0
 AlignOperands:   true
 AlignTrailingComments: true
 AllowAllParametersOfDeclarationOnNextLine: true
@@ -33,11 +34,14 @@ BraceWrapping:
   IndentBraces:    false
 BreakBeforeBinaryOperators: All
 BreakBeforeBraces: Custom
+BreakBeforeInheritanceComma: true  # new in 5.0
 BreakBeforeTernaryOperators: true
-BreakConstructorInitializersBeforeComma: true
+# BreakConstructorInitializersBeforeComma: true  # removed in 5.0
+BreakConstructorInitializers: BeforeComma  # new in 5.0
 BreakStringLiterals: false  # new in 3.9
 ColumnLimit: 80
 CommentPragmas:  ''
+CompactNamespaces: false  # new in 5.0
 ConstructorInitializerAllOnOneLineOrOnePerLine: true
 ConstructorInitializerIndentWidth: 2
 ContinuationIndentWidth: 4
@@ -45,6 +49,7 @@ Cpp11BracedListStyle: true
 DerivePointerAlignment: false
 DisableFormat:   false
 ExperimentalAutoDetectBinPacking: false
+FixNamespaceComments:  true  # new in 5.0
 ForEachMacros:   [ foreach, Q_FOREACH, BOOST_FOREACH ]
 # sort headers by main include file (implicit priority 0),
 # then project and private includes, then system headers
@@ -62,7 +67,8 @@ IndentCaseLabels: true
 IndentWidth:     2
 IndentWrappedFunctionNames: false
 JavaScriptQuotes: Leave  # new in 3.9
-KeepEmptyLinesAtTheStartOfBlocks: true
+JavaScriptWrapImports: true  # new in 5.0
+KeepEmptyLinesAtTheStartOfBlocks: false
 MacroBlockBegin: ''
 MacroBlockEnd: ''
 Language:        Cpp
@@ -70,6 +76,7 @@ MaxEmptyLinesToKeep: 1
 NamespaceIndentation: None
 ObjCBlockIndentWidth: 2
 ObjCSpaceAfterProperty: false
+# PenaltyBreakAssignment:   # new in 5.0
 PenaltyBreakBeforeFirstCallParameter: 1
 PenaltyBreakComment: 300
 PenaltyBreakFirstLessLess: 120
@@ -79,7 +86,9 @@ PenaltyReturnTypeOnItsOwnLine: 200
 PointerAlignment: Left
 ReflowComments: true  # new in 3.9
 SortIncludes: true    # new in 3.9
+SortUsingDeclarations: true  # new in 5.0
 SpaceAfterCStyleCast: false
+SpaceAfterTemplateKeyword: true  # new in 4
 SpaceBeforeAssignmentOperators: true
 SpaceBeforeParens: ControlStatements
 SpaceInEmptyParentheses: false
