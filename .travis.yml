@@ -50,6 +50,13 @@ matrix:
         - BUILD_TYPE=Release
         - CATKIN_CONFIG_OPTIONS="-DCMAKE_BUILD_TYPE=Release -DTREAT_WARNINGS_AS_ERRORS=ON"
       services: docker
+    - os: linux
+      env:
+        - BUILD_NAME=XENIAL_I386_FULL_RELEASE
+        - DOCKER_FILE="ubuntu-xenial-i386"
+        - BUILD_TYPE=Release
+        - CATKIN_CONFIG_OPTIONS="-DCMAKE_BUILD_TYPE=Release -DTREAT_WARNINGS_AS_ERRORS=ON"
+      services: docker
     # Disabled until https://travis-ci.org/personalrobotics/aikido/jobs/375661536#L1561 is resolved
     #- os: linux
     #  env:
